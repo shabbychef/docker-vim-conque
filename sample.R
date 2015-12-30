@@ -13,8 +13,8 @@
 # (I use screen because you can scroll back within vim; probably
 # tmux can be similarly configured, but I have had little luck.)
 #
-# Startup can take ~2 seconds because screen is slow. This is
-# only on initialization.
+# Startup can take ~5 seconds because screen is slow. This is
+# only on initialization of your screen session.
 #
 # screen starts a bash terminal. You are in vim, but can interact with
 # bash. so type
@@ -25,6 +25,7 @@
 # here is some R code. You can execute this in your R-in-screen-in-vim 
 # REPL by visually selecting it (<SHIFT>-v, say), then, once you have
 # the lines selected, typing <F9>
+set.seed(12345)
 x <- rnorm(100)
 print(x)
 sum(x)
@@ -33,7 +34,7 @@ sum(x)
 # you escape insert mode, you can scroll back up.
 
 # try that again, come back here, visually select and hit <F9>
-set.seed(1234)
+set.seed(98765)
 adf <- data.frame(x=rnorm(100),y=runif(100),z=exp(rnorm(100)))
 mdl <- lm(z ~ x + y,data=adf)
 summary(mdl)

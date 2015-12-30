@@ -12,7 +12,7 @@
 
 #####################################################
 # preamble# FOLDUP
-FROM rocker/r-base 
+FROM ubuntu:14.04
 MAINTAINER Steven E. Pav, shabbychef@gmail.com
 USER root
 # UNFOLD
